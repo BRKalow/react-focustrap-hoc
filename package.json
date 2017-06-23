@@ -1,0 +1,36 @@
+{
+  "name": "react-focustrap-hoc",
+  "version": "0.1.0",
+  "description": "A React higher-order component for trapping focus",
+  "repository": "https://github.com/BRKalow/react-focustrap-hoc",
+  "main": "dist/index.js",
+  "module": "dist/index.es.js",
+  "scripts": {
+    "clean": "rimraf ./dist",
+    "build": "yarn run clean && NODE_ENV=production rollup -c",
+    "test": "NODE_ENV=test jest"
+  },
+  "author": "Bryce Kalow",
+  "license": "MIT",
+  "peerDependencies": {
+    "react": "^15.6.1"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babelrc-rollup": "^3.0.0",
+    "enzyme": "^2.9.0",
+    "jest": "^20.0.4",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "react-test-renderer": "^15.6.1",
+    "rimraf": "^2.6.1",
+    "rollup": "^0.43.0",
+    "rollup-plugin-babel": "^2.7.1",
+    "rollup-plugin-node-resolve": "^3.0.0"
+  },
+  "dependencies": {
+    "tabbable": "^1.0.6"
+  }
+}
