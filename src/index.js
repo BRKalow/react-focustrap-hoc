@@ -18,9 +18,7 @@ export default function focusTrap(WrappedComponent, { arrowKeyNavigation } = {})
         this.focusableEls = tabbable(this.container);
 
         if (arrowKeyNavigation) {
-          this.focusableEls.forEach(element => {
-            element.addEventListener('keydown', this.trapFocus);
-          });
+          this.focusableEls.forEach(element => element.addEventListener('keydown', this.trapFocus));
         } else {
           const lastIndex = this.focusableEls.length - 1;
           // Only attach the listeners to the first and last element
@@ -31,9 +29,7 @@ export default function focusTrap(WrappedComponent, { arrowKeyNavigation } = {})
     }
 
     componentWillUnmount() {
-      this.focusableEls.forEach(element => {
-        element.removeEventListener('keydown', this.trapFocus);
-      });
+      this.focusableEls.forEach(element => element.removeEventListener('keydown', this.trapFocus));
     }
 
     focusToElementByIndex(index = 0) {

@@ -1,4 +1,5 @@
-import React from 'React';
+/* global describe, it, expect, document, KeyboardEvent */
+import React from 'react';
 import { mount } from 'enzyme';
 import focusTrap from '../index';
 import { keyMap } from '../utils';
@@ -7,9 +8,9 @@ const makeEvent = args => new KeyboardEvent('keydown', args);
 
 const Component = focusTrap(() => (
   <div>
-    <a href="#" id="link-1">Link 1</a>
-    <a href="#" id="link-2">Link 2</a>
-    <a href="#" id="link-3">Link 3</a>
+    <a href="fake.com" id="link-1">Link 1</a>
+    <a href="fake.com" id="link-2">Link 2</a>
+    <a href="fake.com" id="link-3">Link 3</a>
   </div>
 ), { arrowKeyNavigation: true });
 
@@ -28,7 +29,7 @@ describe('focusTrap', () => {
 
   it('allows arrow key navigation', () => {
     const wrapper = mount(<Component />);
-    
+
     wrapper.find('#link-1').node.dispatchEvent(makeEvent({ keyCode: keyMap.ARROW_DOWN }));
     expect(document.activeElement).toBe(wrapper.find('#link-2').node);
 
