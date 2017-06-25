@@ -1,4 +1,4 @@
-# react-focustrap-hoc
+# react-focustrap-hoc [![build badge](https://travis-ci.org/BRKalow/react-focustrap-hoc.svg?branch=master)](https://travis-ci.org/BRKalow/react-focustrap-hoc)
 
 This higher-order-component can be wrapped around any component to ensure that focus will be trapped inside that component. This is useful in accessibility cases where you do not want a user using keyboard navigation to leave a certain element context, such as a dropdown menu or a modal.
 
